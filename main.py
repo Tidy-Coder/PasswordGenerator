@@ -10,7 +10,7 @@ def genereRandomNumber(tidyNumberA, tidyNumberB, exitNowNow = False):
     else:
       myNumber = str(int(myNumber + "5" + str(int(myNumber * 5))) + 347)
     itsA = None
-    while myNumber > tidyNumberB or myNumber < tidyNumberA:
+    while int(myNumber) > tidyNumberB or int(myNumber) < tidyNumberA:
       if myNumber > tidyNumberB:
         if itsA == True:
           myNumber -= (tidyNumberB - tidyNumberA)
