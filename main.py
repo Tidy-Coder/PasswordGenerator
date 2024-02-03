@@ -20,6 +20,17 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
       elif checkA == True:
         checkA = False
         break
+def writeLetter():
+  for i in genereRandomNumber(0, 25):
+    theAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    print("salut", len(theAlphabet))
+    for ib in genereRandomNumber(1, 4):
+      if ib % 2 == 0:
+        return theAlphabet[i].upper()
+      else:
+        return theAlphabet[i]
+      break
+    break
 def genereStrongPassword(limitationLenString):
   tidyLocation = 0
   tidyPassWord = ""
@@ -28,4 +39,4 @@ def genereStrongPassword(limitationLenString):
       break
     tidyPassWord += str(i)
     tidyLocation += 1
-  return tidyPassWord.replace("7", "@").replace("1", "a").replace("9", "%").replace("3", "^").replace("5", "!").replace("8", "b")
+  return tidyPassWord.replace("13", "*").replace("89", "ù").replace("35", "s").replace("39", "j").replace("7", "@").replace("1", "a").replace("9", "%").replace("3", "^").replace("5", "!").replace("8", "b")
