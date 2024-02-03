@@ -3,9 +3,9 @@ def genereRandomNumber(tidyNumberA, tidyNumberB, exitNowNow = False):
   while True:
     if exitNowNow == True:
       break
-    if myNumber % 2 == 1:
+    if int(myNumber) % 2 == 1:
       myNumber = str(int(myNumber + "5" + str(int(myNumber * 5))) + 453)
-    elif myNumber % 5 == 3:
+    elif int(myNumber) % 5 == 3:
       myNumber = str(int(myNumber + "5" + str(int(myNumber * 5))) + 259)
     else:
       myNumber = str(int(myNumber + "5" + str(int(myNumber * 5))) + 347)
