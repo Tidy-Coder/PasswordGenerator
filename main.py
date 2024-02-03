@@ -14,7 +14,11 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
     elif int(myNumber) < tidyNumberA:
       itsA = True
     while int(myNumber) < tidyNumberB or int(myNumber) > tidyNumberA:
-      myNumber = str(int(int(myNumber) / 2))
+      if int(myNumber) < tidyNumberB:
+        myNumber -= 1
+      elif int(myNumber) > tidyNumberA:
+        myNumber += 1
+      print("haha")
     while int(myNumber) >= tidyNumberB or int(myNumber) <= tidyNumberA:
       if int(myNumber) > tidyNumberB:
         if len(myNumber) == 1:
