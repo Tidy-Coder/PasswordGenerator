@@ -26,6 +26,7 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
       elif int(myNumber) < tidyNumberA:
         myNumber += str((int(myNumber) % 4) + 1)
         itsA = True
+      print("haha")
     if theTidyIteration > 2555:
       theTidyIteration = 1
     theTidyIteration += 1
