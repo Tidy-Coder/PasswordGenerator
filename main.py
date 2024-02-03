@@ -31,8 +31,8 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
         itsA = True
       else:
         myNumber = str(int(myNumber) + tidyNumberB)
-    if theTidyIteration > 2555:
-      theTidyIteration = 1
-    theTidyIteration += 1
-    myNumber = str(int(int(myNumber) / 2))
-    yield int(myNumber)
+      if theTidyIteration > 2555:
+        theTidyIteration = 1
+      theTidyIteration += 1
+      myNumber = str(int(int(myNumber) / 2))
+      yield int(myNumber)
