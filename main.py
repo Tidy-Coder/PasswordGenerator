@@ -4,9 +4,9 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
     if int(myNumber) % 2 == 1:
       myNumber = str(int(myNumber + "5" + str(int(int(myNumber) * 5))) + 453)
     elif int(myNumber) % 5 == 3:
-      myNumber = str(int(myNumber + "5" + str(int(int(myNumber) * 5))) + 259)
+      myNumber = str(int(myNumber + "7" + str(int(int(myNumber) * 5))) + 259)
     else:
-      myNumber = str(int(myNumber + "5" + str(int(int(myNumber) * 5))) + 347)
+      myNumber = str(int(myNumber + "13" + str(int(int(myNumber) * 5))) + 347)
     itsA = None
     if int(myNumber) > tidyNumberB:
       itsA = False
