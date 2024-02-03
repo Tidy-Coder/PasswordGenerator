@@ -1,12 +1,12 @@
 def genereRandomNumber(tidyNumberA, tidyNumberB):
-  myNumber = str(tidyNumberA)
+  myNumber = str(tidyNumberA + tidyNumberB)
   while True:
     if int(myNumber) % 2 == 1:
-      myNumber = str(int(myNumber + "5" + str(int(int(myNumber) * 3))) + 453)
+      myNumber = str(int(myNumber + "5" + str(int(int(myNumber) / 2.45 * 3))) + 453)
     elif int(myNumber) % 5 == 3:
-      myNumber = str(int(myNumber + "7" + str(int(int(myNumber) * 7))) + 259)
+      myNumber = str(int(myNumber + "7" + str(int(int(myNumber) / 5.48 * 1.433))) + 259)
     else:
-      myNumber = str(int(myNumber + "13" + str(int(int(myNumber) * 19))) + 347)
+      myNumber = str(int(myNumber + "13" + str(int(int(myNumber) / 9.384 * 1.598))) + 347)
     itsA = None
     if int(myNumber) > tidyNumberB:
       itsA = False
