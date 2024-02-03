@@ -17,7 +17,10 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
         if itsA == True:
           myNumber = str(int(myNumber) - (tidyNumberB - tidyNumberA))
           continue
-        myNumber = myNumber[1:]
+        if len(myNumber) == 1:
+          myNumber = str(int(myNumber) - (tidyNumberB - tidyNumberA))
+        else:
+          myNumber = myNumber[1:]
         itsA = False
       elif int(myNumber) < tidyNumberA:
         myNumber += str((int(myNumber) % 4) + 1)
