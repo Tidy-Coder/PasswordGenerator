@@ -11,9 +11,9 @@ def genereRandomNumber(tidyNumberA, tidyNumberB, exitNowNow = False):
       myNumber = str(int(myNumber + "5" + str(int(myNumber * 5))) + 347)
     itsA = None
     while int(myNumber) > tidyNumberB or int(myNumber) < tidyNumberA:
-      if myNumber > tidyNumberB:
+      if int(myNumber) > tidyNumberB:
         if itsA == True:
-          myNumber -= (tidyNumberB - tidyNumberA)
+          myNumber = int(myNumber) - (tidyNumberB - tidyNumberA)
           continue
         myNumber = myNumber[1:]
         itsA = False
