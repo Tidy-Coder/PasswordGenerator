@@ -1,12 +1,20 @@
 import time
 def genereRandomNumber(tidyNumberA, tidyNumberB):
-  myNumber = tidyNumberA
+  myNumberA = tidyNumberA
+  myNumberB = tidyNumberB
+  checkA = False
   while True:
-    while myNumber < tidyNumberB:
-      myNumber += int(str(time.time())[-1]) * int(str(time.time())[-2:])
-      if myNumber >= tidyNumberA and myNumber <= tidyNumberB:
-        yield myNumber
-    while myNumber > tidyNumberA:
-      myNumber -= int(str(time.time())[-1]) * int(str(time.time())[-2:])
-      if myNumber >= tidyNumberA and myNumber <= tidyNumberB:
-        yield myNumber
+    while True:
+      if myNumberA < tidyNumberB:
+        myNumberA += int(str(time.time())[-1]) * int(str(time.time())[-2:])
+        if myNumberA >= tidyNumberA and myNumberA <= tidyNumberB:
+          yield myNumberA
+      else:
+        checkA = True
+      if myNumberB < tidyNumberB:
+        myNumberB += int(str(time.time())[-1]) * int(str(time.time())[-2:])
+        if myNumberB >= tidyNumberA and myNumberB <= tidyNumberB:
+          yield myNumberB
+      elif checkA == True:
+        checkA = False
+        break
