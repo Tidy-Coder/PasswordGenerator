@@ -22,5 +22,4 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
       elif int(myNumber) < tidyNumberA:
         myNumber += str((int(myNumber) % 4) + 1)
         itsA = True
-      else:
-        yield int(myNumber)
+    yield int(myNumber)
