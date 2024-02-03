@@ -34,6 +34,5 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
     if theTidyIteration > 2555:
       theTidyIteration = 1
     theTidyIteration += 1
-    print(myNumber)
     myNumber = str(int(int(myNumber) / 2))
     yield int(myNumber)
