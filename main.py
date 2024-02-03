@@ -18,11 +18,14 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
         print("haha2")
         if itsA == True:
           myNumber = str(int(myNumber) - (tidyNumberB - tidyNumberA))
+          print("haha5")
           continue
         if len(myNumber) == 1:
           myNumber = str(int(myNumber) - (tidyNumberB - tidyNumberA))
+          print("haha7")
         else:
           myNumber = str(int(int(myNumber) / theTidyIteration))
+          print("haha6")
         itsA = False
       elif int(myNumber) < tidyNumberA:
         print("haha1")
