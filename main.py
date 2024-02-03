@@ -35,4 +35,5 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
       theTidyIteration = 1
     theTidyIteration += 1
     print(myNumber)
+    myNumber /= 2
     yield int(myNumber)
