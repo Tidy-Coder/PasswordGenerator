@@ -2,5 +2,5 @@ import time
 def genereRandomNumber(tidyNumberA, tidyNumberB):
   myNumber = 1
   while True:
-    myNumber = int(str(time.time() / (myNumber / 555 * myNumber)).replace(".", ""))
+    myNumber = int(str(time.time() / (myNumber / (myNumber - 3245) * myNumber)).replace(".", ""))
     yield myNumber
