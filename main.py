@@ -20,3 +20,11 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
       elif checkA == True:
         checkA = False
         break
+def genereStrongPassword(limitationLenString):
+  tidyLocation = 0
+  for i in genereRandomNumber(0, 9):
+    if tidyLocation == limitationLenString:
+      break
+    tidyPassWord += str(i)
+    tidyLocation += 1
+  return tidyPassWord.replace("7", "@").replace("1", "a").replace("9", "%").replace("3", "^").replace("5", "!").replace("8", "b")
