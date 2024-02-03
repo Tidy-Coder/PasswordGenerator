@@ -1,1 +1,2 @@
-def genereRandomNumber()
+def genereRandomNumber():
+  pass
