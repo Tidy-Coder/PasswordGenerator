@@ -1,2 +1,23 @@
-def genereRandomNumber():
-  pass
+def genereRandomNumber(tidyNumberA, tidyNumberB, exitNowNow = False):
+  myNumber = str(tidyNumberA)
+  while True:
+    if exitNowNow == True:
+      break
+    if myNumber % 2 == 1:
+      myNumber = str(int(myNumber + "5" + str(int(myNumber * 5))) + 453)
+    elif myNumber % 5 == 3:
+      myNumber = str(int(myNumber + "5" + str(int(myNumber * 5))) + 259)
+    else:
+      myNumber = str(int(myNumber + "5" + str(int(myNumber * 5))) + 347)
+    itsA = None
+    while myNumber > tidyNumberB or myNumber < tidyNumberA:
+      if myNumber > tidyNumberB:
+        if itsA == True:
+          myNumber -= (tidyNumberB - tidyNumberA)
+          continue
+        myNumber = myNumber[1:]
+        itsA = False
+      else:
+        myNumber += str((int(myNumber) % 4) + 1)
+        itsA = True
+      yield int(myNumber)
