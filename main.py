@@ -1,43 +1,6 @@
+import time
 def genereRandomNumber(tidyNumberA, tidyNumberB):
-  myNumber = str(tidyNumberA + tidyNumberB)
-  theTidyIteration = 1
+  myNumber = 1
   while True:
-    if int(myNumber) % 2 == 1:
-      myNumber = str(int(myNumber + "5" + str(int(int(myNumber) / 2.45 * 3))) + 453)
-    elif int(myNumber) % 5 == 3:
-      myNumber = str(int(myNumber + "7" + str(int(int(myNumber) / 5.48 * 1.433))) + 259)
-    else:
-      myNumber = str(int(myNumber + "13" + str(int(int(myNumber) / 9.384 * 1.598))) + 347)
-    itsA = None
-    if int(myNumber) > tidyNumberB:
-      itsA = False
-    elif int(myNumber) < tidyNumberA:
-      itsA = True
-    while int(myNumber) < tidyNumberB or int(myNumber) > tidyNumberA:
-      myNumber = int(myNumber)
-      if int(myNumber) < tidyNumberB:
-        myNumber -= 1
-      elif int(myNumber) > tidyNumberA:
-        myNumber += 1
-      myNumber = str(myNumber)
-      print("haha")
-    while int(myNumber) >= tidyNumberB or int(myNumber) <= tidyNumberA:
-      if int(myNumber) > tidyNumberB:
-        if len(myNumber) == 1:
-          if theTidyIteration % 2 == 0:
-            myNumber = str(int(int(myNumber) / 3))
-          else:
-            myNumber = str(int(int(myNumber) / 5))
-        else:
-          myNumber = myNumber[1:]
-        itsA = False
-      elif int(myNumber) < tidyNumberA:
-        myNumber = str(int(myNumber) * 2)
-        itsA = True
-      else:
-        myNumber = str(int(myNumber) + tidyNumberB)
-      if theTidyIteration > 2555:
-        theTidyIteration = 1
-      theTidyIteration += 1
-    yield int(myNumber)
-    myNumber = str(int(int(myNumber) / 2))
+    myNumber = int(str(time.time() / (myNumber / 555 * myNumber)).replace(".", ""))
+    yield myNumber
