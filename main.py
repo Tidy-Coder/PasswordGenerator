@@ -4,6 +4,8 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
   myNumberB = tidyNumberB
   checkA = False
   while True:
+    myNumberA = tidyNumberA
+    myNumberB = tidyNumberB
     while True:
       if myNumberA < tidyNumberB:
         myNumberA += int(float(str(time.time())[-1])) * int(float(str(time.time())[-2:]))
