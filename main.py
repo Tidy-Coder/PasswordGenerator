@@ -20,17 +20,24 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
       elif checkA == True:
         checkA = False
         break
-def writeLetter():
+def writeLetters():
   for i in genereRandomNumber(0, 25):
     theAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    print("salut", len(theAlphabet))
     for ib in genereRandomNumber(1, 4):
       if ib % 2 == 0:
-        return theAlphabet[i].upper()
+        yield theAlphabet[i].upper()
       else:
-        return theAlphabet[i]
+        yield theAlphabet[i]
       break
-    break
+def writeSevenLetters():
+  arrayContainsLetters = []
+  localisationLetterZ = 0
+  for i in writeLetters():
+    arrayContainsLetters += [i]
+    localisationLetterZ += 1
+    if localisationLetterZ == 7:
+      break
+  return arrayContainsLetters
 def genereStrongPassword(limitationLenString):
   tidyLocation = 0
   tidyPassWord = ""
@@ -39,4 +46,5 @@ def genereStrongPassword(limitationLenString):
       break
     tidyPassWord += str(i)
     tidyLocation += 1
-  return tidyPassWord.replace("13", "*").replace("89", "ù").replace("35", "s").replace("39", "j").replace("7", "@").replace("1", "a").replace("9", "%").replace("3", "^").replace("5", "!").replace("8", "b")
+    tidyLettersArray = writeSevenLetters()
+  return tidyPassWord.replace("11", "%1").replace("23", "¨3").replace("87", ";7").replace("93", "/3").replace("1", tidyLettersArray[1]).replace("2", tidyLettersArray[3]).replace("3", tidyLettersArray[5]).replace("4", "à").replace("5", "@").replace("6", "*").replace("7", "/").replace("8", "^").replace("9", "!")
