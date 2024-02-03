@@ -13,7 +13,7 @@ def genereRandomNumber(tidyNumberA, tidyNumberB, exitNowNow = False):
     while int(myNumber) > tidyNumberB or int(myNumber) < tidyNumberA:
       if int(myNumber) > tidyNumberB:
         if itsA == True:
-          myNumber = int(myNumber) - (tidyNumberB - tidyNumberA)
+          myNumber = str(int(myNumber) - (tidyNumberB - tidyNumberA))
           continue
         myNumber = myNumber[1:]
         itsA = False
