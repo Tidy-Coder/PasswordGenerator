@@ -22,6 +22,7 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
         break
 def genereStrongPassword(limitationLenString):
   tidyLocation = 0
+  tidyPassWord = ""
   for i in genereRandomNumber(0, 9):
     if tidyLocation == limitationLenString:
       break
