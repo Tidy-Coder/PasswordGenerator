@@ -1,6 +1,6 @@
 def genereRandomNumber(tidyNumberA, tidyNumberB):
   myNumber = str(tidyNumberA + tidyNumberB)
-  theTidyIteration = 0
+  theTidyIteration = 1
   while True:
     if int(myNumber) % 2 == 1:
       myNumber = str(int(myNumber + "5" + str(int(int(myNumber) / 2.45 * 3))) + 453)
@@ -28,5 +28,5 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
         itsA = True
     yield int(myNumber)
     if theTidyIteration > 2555:
-      theTidyIteration = 0
+      theTidyIteration = 1
     theTidyIteration += 1
