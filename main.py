@@ -25,7 +25,7 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
           print("haha7")
         else:
           myNumber = str(int(int(myNumber) / theTidyIteration))
-          print("haha6")
+          print("haha6", myNumber)
         itsA = False
       elif int(myNumber) < tidyNumberA:
         print("haha1")
