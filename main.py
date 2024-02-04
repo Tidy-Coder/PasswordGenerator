@@ -1,4 +1,5 @@
 import time
+# This file is Python code...
 def genereRandomNumber(tidyNumberA, tidyNumberB):
   myNumberA = tidyNumberA
   myNumberB = tidyNumberB
@@ -52,4 +53,4 @@ while True:
   tidyInput = input("Please enter the length of the password string, or enter \"Exit\" or \"exit\" to exit.")
   if tidyInput == "Exit" or tidyInput == "exit":
     break
-  genereStrongPassword(tidyInput)
+  print(genereStrongPassword(int(tidyInput)))
