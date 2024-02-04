@@ -48,3 +48,8 @@ def genereStrongPassword(limitationLenString):
     tidyLocation += 1
   tidyLettersArray = writeSevenLetters()
   return tidyPassWord.replace("11", "%1").replace("23", "¨3").replace("87", ";7").replace("93", "/3").replace("1", tidyLettersArray[1]).replace("2", tidyLettersArray[3]).replace("3", tidyLettersArray[5]).replace("4", "à").replace("5", "@").replace("6", "*").replace("7", "/").replace("8", "^").replace("9", "!")
+while True:
+  tidyInput = input("Please enter the length of the password string, or enter \"Exit\" or \"exit\" to exit.")
+  if tidyInput == "Exit" or tidyInput == "exit":
+    break
+  genereStrongPassword(tidyInput)
