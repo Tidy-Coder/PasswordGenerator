@@ -53,4 +53,4 @@ while True:
   tidyInput = input("Please enter the length of the password string, or enter \"Exit\" or \"exit\" to exit.")
   if tidyInput == "Exit" or tidyInput == "exit":
     break
-  print(generatesStrongPassword(int(tidyInput)))
+  print(generateStrongPassword(int(tidyInput)))
