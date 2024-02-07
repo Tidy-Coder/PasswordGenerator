@@ -1,6 +1,6 @@
 import time
 # This file is Python code...
-def genereRandomNumber(tidyNumberA, tidyNumberB):
+def generateRandomNumber(tidyNumberA, tidyNumberB):
   myNumberA = tidyNumberA
   myNumberB = tidyNumberB
   checkA = True
@@ -22,9 +22,9 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
         checkA = False
         break
 def writeLetters():
-  for i in genereRandomNumber(0, 25):
+  for i in generateRandomNumber(0, 25):
     theAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    for ib in genereRandomNumber(1, 4):
+    for ib in generateRandomNumber(1, 4):
       if ib % 2 == 0:
         yield theAlphabet[i].upper()
       else:
@@ -42,7 +42,7 @@ def writeSevenLetters():
 def genereStrongPassword(limitationLenString):
   tidyLocation = 0
   tidyPassWord = ""
-  for i in genereRandomNumber(0, 9):
+  for i in generateRandomNumber(0, 9):
     if tidyLocation == limitationLenString:
       break
     tidyPassWord += str(i)
