@@ -3,7 +3,7 @@ import time
 def genereRandomNumber(tidyNumberA, tidyNumberB):
   myNumberA = tidyNumberA
   myNumberB = tidyNumberB
-  checkA = False
+  checkA = True
   while True:
     myNumberA = tidyNumberA
     myNumberB = tidyNumberB
@@ -14,8 +14,8 @@ def genereRandomNumber(tidyNumberA, tidyNumberB):
           yield myNumberA
       else:
         checkA = True
-      if myNumberB < tidyNumberB:
-        myNumberB += int(float(str(time.time())[-1]))
+      if myNumberB > tidyNumberA:
+        myNumberB -= int(float(str(time.time())[-1]))
         if myNumberB >= tidyNumberA and myNumberB <= tidyNumberB:
           yield myNumberB
       elif checkA == True:
