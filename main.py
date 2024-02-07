@@ -39,7 +39,7 @@ def writeSevenLetters():
     if localisationLetterZ == 7:
       break
   return arrayContainsLetters
-def genereStrongPassword(limitationLenString):
+def generateStrongPassword(limitationLenString):
   tidyLocation = 0
   tidyPassWord = ""
   for i in generateRandomNumber(0, 9):
@@ -53,4 +53,4 @@ while True:
   tidyInput = input("Please enter the length of the password string, or enter \"Exit\" or \"exit\" to exit.")
   if tidyInput == "Exit" or tidyInput == "exit":
     break
-  print(genereStrongPassword(int(tidyInput)))
+  print(generatesStrongPassword(int(tidyInput)))
