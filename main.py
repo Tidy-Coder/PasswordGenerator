@@ -55,6 +55,7 @@ def generateStrongPassword(limitationLenString):
     tidyLocation += 1
   tidyLettersArray = writeSevenLetters()
   def writeLetter():
+    print(writeSevenLetters()[5])
     return writeSevenLetters()[5]
   def writeNumber():
     for i in generateRandomNumber(0, 9):
