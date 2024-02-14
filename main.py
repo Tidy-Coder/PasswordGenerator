@@ -41,9 +41,11 @@ def writeSevenLetters():
   return arrayContainsLetters
 def replaceUsingFunctions(tidyWord, toreplace, tidyFunction):
   tidyWordReturn = tidyWord
+  tidyLocation = 0
   for i in tidyWordReturn:
     if i == toreplace[0]:
-      i = tidyFunction()
+      tidyWordReturn[tidyLocation] = tidyFunction()
+    tidyLocation += 1
   return tidyWordReturn
 def generateStrongPassword(limitationLenString):
   tidyLocation = 0
@@ -55,7 +57,6 @@ def generateStrongPassword(limitationLenString):
     tidyLocation += 1
   tidyLettersArray = writeSevenLetters()
   def writeLetter():
-    print(writeSevenLetters()[5])
     return writeSevenLetters()[5]
   def writeNumber():
     for i in generateRandomNumber(0, 9):
