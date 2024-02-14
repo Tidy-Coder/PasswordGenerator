@@ -81,7 +81,7 @@ def generateStrongPassword(limitationLenString):
         return "¨"
       elif i == 9:
         return "°"
-  return replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(tidyPassWord, "1", writeLetter), "2", writeLetter), "3", writeNumber), "3", writeNumber), "4", writeSpecialChar), "5", writeSpecialChar), "6", writeSpecialChar), "7", writeLetter), "8", writeNumber), "9", writeSpecialChar), "0", writeLetter)
+  return replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(tidyPassWord, "1", writeLetter), "2", writeLetter), "3", writeNumber), "3", writeNumber), "4", writeSpecialChar), "5", writeSpecialChar), "6", writeSpecialChar), "7", writeLetter), "8", writeNumber), "9", writeSpecialChar), "0", writeLetter)
 while True:
   tidyInput = input("Please enter the length of the password string, or enter \"Exit\" or \"exit\" to exit.")
   if tidyInput == "Exit" or tidyInput == "exit":
