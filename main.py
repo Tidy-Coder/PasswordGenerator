@@ -39,6 +39,12 @@ def writeSevenLetters():
     if localisationLetterZ == 7:
       break
   return arrayContainsLetters
+def replaceUsingFunctions(tidyWord, toreplace, tidyFunction):
+  tidyWordReturn = tidyWord
+  for i in tidyWordReturn:
+    if i == toreplace[0]:
+      i = tidyFunction()
+  return tidyWordReturn
 def generateStrongPassword(limitationLenString):
   tidyLocation = 0
   tidyPassWord = ""
@@ -48,7 +54,34 @@ def generateStrongPassword(limitationLenString):
     tidyPassWord += str(i)
     tidyLocation += 1
   tidyLettersArray = writeSevenLetters()
-  return tidyPassWord.replace("11", "%1").replace("23", "¨3").replace("87", ";7").replace("93", "/3").replace("1", tidyLettersArray[1]).replace("2", tidyLettersArray[3]).replace("3", tidyLettersArray[5]).replace("4", "à").replace("5", "@").replace("6", "*").replace("7", "/").replace("8", "^").replace("9", "!").replace("0", "#")
+  def writeLetter():
+    return writeSevenLetters()[5]
+  def writeNumber():
+    for i in generateRandomNumber(0, 9):
+      return i
+  def writeSpecialChar():
+    for i in generateRandomNumber(0, 9):
+      if i == 0:
+        return "%"
+      elif i == 1:
+        return "@"
+      elif i == 2:
+        return "*"
+      elif i == 3:
+        return "~"
+      elif i == 4:
+        return "&"
+      elif i == 5:
+        return "¿"
+      elif i == 6:
+        return "“"
+      elif i == 7:
+        return "^"
+      elif i == 8:
+        return "¨"
+      elif i == 9:
+        return "°"
+  return replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(tidyPassWord, "1", writeLetter), "2", writeLetter), "3", writeNumber), "3", writeNumber), "4", writeSpecialChar), "5", writeSpecialChar), "6", writeSpecialChar), "7", writeLetter), "8", writeNumber), "9", writeSpecialChar), "0", writeLetter)
 while True:
   tidyInput = input("Please enter the length of the password string, or enter \"Exit\" or \"exit\" to exit.")
   if tidyInput == "Exit" or tidyInput == "exit":
