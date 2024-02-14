@@ -46,7 +46,7 @@ def replaceUsingFunctions(tidyWord, toreplace, tidyFunction):
     if i == toreplace[0]:
       tidyWordReturnB = list(tidyWordReturn)
       tidyWordReturnB[tidyLocation] = tidyFunction()
-      tidyWordReturn = str(tidyWordReturnB)
+      tidyWordReturn = "".join(tidyWordReturnB)
     tidyLocation += 1
   return tidyWordReturn
 def generateStrongPassword(limitationLenString):
@@ -62,7 +62,7 @@ def generateStrongPassword(limitationLenString):
     return writeSevenLetters()[5]
   def writeNumber():
     for i in generateRandomNumber(0, 9):
-      return i
+      return str(i)
   def writeSpecialChar():
     for i in generateRandomNumber(0, 9):
       if i == 0:
