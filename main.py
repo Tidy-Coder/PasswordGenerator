@@ -44,7 +44,9 @@ def replaceUsingFunctions(tidyWord, toreplace, tidyFunction):
   tidyLocation = 0
   for i in tidyWordReturn:
     if i == toreplace[0]:
-      tidyWordReturn[tidyLocation] = tidyFunction()
+      tidyWordReturnB = list(tidyWordReturn)
+      tidyWordReturnB[tidyLocation] = tidyFunction()
+      tidyWordReturn = str(tidyWordReturnB)
     tidyLocation += 1
   return tidyWordReturn
 def generateStrongPassword(limitationLenString):
