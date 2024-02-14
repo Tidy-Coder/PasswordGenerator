@@ -61,25 +61,25 @@ def generateStrongPassword(limitationLenString):
       return i
   def writeSpecialChar():
     for i in generateRandomNumber(0, 9):
-      if i == "0":
+      if i == 0:
         return "%"
-      elif i == "1":
+      elif i == 1:
         return "@"
-      elif i == "2":
+      elif i == 2:
         return "*"
-      elif i == "3":
+      elif i == 3:
         return "~"
-      elif i == "4":
+      elif i == 4:
         return "&"
-      elif i == "5":
+      elif i == 5:
         return "¿"
-      elif i == "6":
+      elif i == 6:
         return "“"
-      elif i == "7":
+      elif i == 7:
         return "^"
-      elif i == "8":
+      elif i == 8:
         return "¨"
-      elif i == "9":
+      elif i == 9:
         return "°"
   return replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(replaceUsingFunctions(tidyPassWord, "1", writeLetter), "2", writeLetter), "3", writeNumber), "3", writeNumber), "4", writeSpecialChar), "5", writeSpecialChar), "6", writeSpecialChar), "7", writeLetter), "8", writeNumber), "9", writeSpecialChar), "0", writeLetter)
 while True:
