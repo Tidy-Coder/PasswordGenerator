@@ -1,4 +1,4 @@
-import secrets.choice
+import random.choice
 # this is Python file
 def generateStrongPasswordTidy(numberOfLetters):
   strongPassword = "";
