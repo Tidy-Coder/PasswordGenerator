@@ -8,7 +8,7 @@ def generateStrongPasswordTidy(numberOfLetters):
 
 while True:
   entranceTidy = input("Please enter length of your strong password or enter exit to exit")
-  if(entranceTidy.uppercase() == "exit".uppercase()):
+  if(entranceTidy.upper() == "EXIT"):
     break
   else:
     try:
