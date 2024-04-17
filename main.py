@@ -14,4 +14,4 @@ while True:
     try:
       print(generateStrongPasswordTidy(int(entranceTidy)))
     except ValueError:
-      print("Please enter int...")
+      print("Please enter integer...")
