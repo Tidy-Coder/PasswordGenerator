@@ -12,6 +12,6 @@ while True:
     break
   else:
     try:
-      print(int(print(generateStrongPasswordTidy(int(entranceTidy)))))
+      print(generateStrongPasswordTidy(int(entranceTidy)))
     except ValueError:
       print("Please enter int...")
