@@ -6,4 +6,14 @@ def generateStrongPasswordTidy(numberOfLetters):
     strongPassword += randomNumberPlease.choice("abcdefghijklmnopqrstuvwxyz$%ùµ*/!.;?œ“+=1234567890}]{[|''\"\"¡/@à°&ABCDEFGHIJKLMNOPQRSTUVWXYZ")
   return strongPassword
 
-print(generateStrongPasswordTidy(5))
+while(true){
+  entranceTidy = input("Please enter length of your strong password or enter exit to exit")
+  if(entranceTidy.uppercase() == "exit".uppercase()):
+    break
+  else:
+    try:
+      print(int(print(generateStrongPasswordTidy())))
+    except ValueError:
+      print("Please enter int...")
+}
+
