@@ -6,4 +6,4 @@ def generateStrongPasswordTidy(numberOfLetters):
     strongPassword += randomNumberPlease.choice("abcdefghijklmnopqrstuvwxyz$%ùµ*/!.;?œ“+=1234567890}]{[|''\"\"¡/")
   return strongPassword
 
-print(generateStrongPasswordTidy)
+print(generateStrongPasswordTidy(5))
